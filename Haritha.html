@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artistry By Haritha | Bridal Makeup</title>
+  <style>
+    :root {
+      --bg: #1f1848;
+      --bg-soft: #2e2467;
+      --gold: #f2c84b;
+      --gold-soft: #ffe59a;
+      --text: #ffffff;
+      --muted: #d8d4ef;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #3c2d86 0%, var(--bg) 45%, #160f34 100%);
+      color: var(--text);
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* --- LOGO HEADER --- */
+    .site-header {
+      padding: 50px 0 20px 0; /* More top space for a "Brand" feel */
+      text-align: center;
+    }
+
+    .main-logo {
+      width: 100%;
+      max-width: 380px; /* Increased from 240px for better visibility */
+      height: auto;
+      filter: drop-shadow(0 12px 25px rgba(0,0,0,0.4));
+      transition: transform 0.3s ease;
+    }
+
+    .main-logo:hover {
+      transform: scale(1.02); /* Subtle pop when hovering */
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 0 0 40px 0; /* Reduced top padding since header is larger */
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: clamp(1.8rem, 5vw, 3.5rem); /* Scaled for one-line fit */
+      line-height: 1.1;
+      font-family: Georgia, serif;
+      white-space: nowrap; /* Forces one line on desktop */
+    }
+
+    h1 span { color: var(--gold); }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 650px;
+    }
+
+    .cta-row { margin-bottom: 30px; }
+
+    /* --- QUICK INFO TILES --- */
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .info-card span { font-size: 0.85rem; }
+
+    /* --- SERVICES SECTION --- */
+    .services-section { 
+      padding: 50px 0 30px 0; /* Reduced top padding */
+      border-top: 1px solid var(--border);
+    }
+    
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 { font-size: 2rem; font-family: Georgia, serif; margin: 0; }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .service {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px; 
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .service h3 { color: var(--gold-soft); margin: 0; font-size: 1rem; }
+    .service p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+    /* --- CONTACT SECTION --- */
+    .contact-section { padding: 30px 0 50px 0; }
+    .contact-box {
+      background: rgba(242, 200, 75, 0.05);
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary { background: var(--gold); color: #1a143d; }
+    .btn-secondary { border: 1px solid var(--border); margin-left: 10px; }
+
+    footer { text-align: center; padding: 20px; opacity: 0.5; font-size: 0.8rem; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) {
+      h1 { white-space: normal; } /* Allow wrap on mobile for readability */
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .contact-box { flex-direction: column; text-align: center; gap: 20px; }
+      .btn-secondary { margin-left: 0; margin-top: 10px; }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid, .quick-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="logo.png" alt="Artistry By Haritha Logo" class="main-logo">
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Elegance Defined by <span>Artistry</span></h1>
+        <p class="lead">Premium transformations and contemporary beauty services tailored for your special moments.</p>
+        
+        <div class="cta-row">
+          <a href="tel:6147078179" class="btn btn-primary">Book Now</a>
+          <a href="https://www.instagram.com/haritha_makeup_hairstyle/" target="_blank" class="btn btn-secondary">Portfolio</a>
+        </div>
+
+        <div class="quick-info">
+          <div class="info-card"><strong>Location</strong><span>Available for Travel</span></div>
+          <div class="info-card"><strong>Specialty</strong><span>Bridal & Occasion</span></div>
+          <div class="info-card"><strong>Inquiries</strong><span>614-707-8179</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our <span>Services</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service">
+          <img src="icon-bridal-makeup.png" alt="Bridal Icon" class="service-icon">
+          <div class="service-text"><h3>Bridal Makeup</h3><p>Custom looks for brides.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-no-makeup.png" alt="No Makeup Icon" class="service-icon">
+          <div class="service-text"><h3>No-Makeup Look</h3><p>Soft glam finish.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-party-makeup.png" alt="Party Icon" class="service-icon">
+          <div class="service-text"><h3>Party Makeup</h3><p>Festive celebrations.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-baby-shower.png" alt="Baby Shower Icon" class="service-icon">
+          <div class="service-text"><h3>Baby Shower</h3><p>Polished maternity styling.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-men-grooming.png" alt="Men Grooming Icon" class="service-icon">
+          <div class="service-text"><h3>Men Grooming</h3><p>Camera-ready finishing.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-saree-draping.png" alt="Saree Draping Icon" class="service-icon">
+          <div class="service-text"><h3>Saree Draping</h3><p>Elegant draping.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-hair-styles.png" alt="Hair Style Icon" class="service-icon">
+          <div class="service-text"><h3>Hair Styles</h3><p>Braids, buns, and curls.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-mehndi.png" alt="Mehndi Icon" class="service-icon">
+          <div class="service-text"><h3>Mehndi</h3><p>Traditional designs.</p></div>
+        </article>
+        
+        <article class="service">
+          <img src="icon-gel-nails.png" alt="Gel Nails Icon" class="service-icon">
+          <div class="service-text"><h3>Gel Nails</h3><p>Professional styling.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <h3>Ready to Glow?</h3>
+          <p>Contact for pricing and travel availability.</p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="tel:6147078179">Call 614-707-8179</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/haritha_makeup_hairstyle/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Artistry By Haritha · Bridal & Beauty
+  </footer>
+
+</body>
+</html>
